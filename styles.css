@@ -1,0 +1,87 @@
+/**{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}*/
+
+/* 
+-----------BRANDS COLORS-----------
+#050517 --- DARK 
+#CF5C36 --- FLAME
+#EFC88B --- SUNSET
+#F4E3B2 --- VANILLA
+#D3D5D7 --- PLATINIUM
+*/
+@font-face {
+    font-family: name;
+    src: url(./Italianno/Italianno-Regular.ttf);
+}
+
+body{
+    background-color: #1D2D44;
+
+}
+h1,h2,h3,p{
+    color: #D3D5D7 ;
+    text-align: center;
+}
+
+h2{
+    font-family: name;
+}
+
+.cards__container{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card{
+    margin: 10px;
+    padding: 5px;
+    width: 20%;
+    background-color: #050517;
+    border-radius: 25% 0 25% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.card__imagen{
+    border-radius: 50%;
+    width: 60%;
+    object-fit: cover;
+    box-shadow: white 0 0 15px;
+}
+.card__text{
+    width: 80%;
+}
+
+/*------------- QUERIES -------------*/
+
+@media (max-width: 480px) {
+    .cards__container{
+        max-width: 80%;
+    }
+    .card{
+        width: 70%;
+        min-width: 200px;
+    }
+}
+@media (min-width: 480px) and (max-width: 769px) {
+    .cards__container{
+        max-width: 70%;
+    }
+    .card{
+        width: 40%;
+    }
+}
+@media (min-width: 769px) and (max-width:1025px) {
+
+}
+@media (min-width: 1025px) {
+
+}
