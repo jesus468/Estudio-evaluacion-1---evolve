@@ -1,4 +1,5 @@
 
+
 /* 
 -----------BRANDS COLORS-----------
 #050517 --- DARK 
@@ -7,7 +8,6 @@
 #F4E3B2 --- VANILLA
 #D3D5D7 --- PLATINIUM
 */
-
 *{
     padding: 0;
     margin: 0;
@@ -57,64 +57,51 @@ body{
 h1,h2,h3,p{
     color: #D3D5D7 ;
     text-align: center;
-    margin: 10px;
 }
 
 h2{
     font-family: name;
     font-size: 2rem;
-
 }
-
-.cards__container{
+.gallery__wrapper{
     max-width: 1200px;
+    width: 80%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
+    background-color: #D3D5D7;
 }
-.card{
-    margin: 10px;
-    padding: 5px;
-    width: 20%;
-    background-color: #050517;
-    border-radius: 25% 0 25% 0;
-    display: flex;
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4 , minmax(50px, 1fr)) ;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
+    padding: 25px;
+    gap: 15px;
 }
-.card__imagen{
-    border-radius: 50%;
-    margin: 10px;
-    width: 60%;
+.gallery__item{
+    width: 100%;
+}
+.gallery__img{
+    border-radius: 15px;
     object-fit: cover;
-    box-shadow: white 0 0 15px;
-}
-.card__text{
-    width: 80%;
 }
 
 /*------------- QUERIES -------------*/
 
 @media (max-width: 480px) {
-    .cards__container{
-        max-width: 80%;
-    }
-    .card{
-        width: 70%;
-        min-width: 200px;
+    .gallery{
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(4, 1fr);
     }
 }
 @media (min-width: 480px) and (max-width: 769px) {
-    .cards__container{
-        max-width: 70%;
+    .gallery{
+        grid-template-columns: repeat(2, minmax(0px,1fr));
+        grid-template-rows: repeat(2, minmax(0px,1fr) );
     }
-    .card{
-        width: 40%;
+    .gallery__item{
+        width: 100%;
     }
+    
 }
 @media (min-width: 769px) and (max-width:1025px) {
 
